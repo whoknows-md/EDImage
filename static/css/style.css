@@ -1,0 +1,228 @@
+/* General Styles */
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    background-color: #1F1F1F;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+}
+
+.title-block {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title-text {
+    font-size: 2em;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    max-width: 1000px;
+    background-color: #2D2D2D;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+    text-align: center;
+    position: relative;
+    top: -35px;
+    height: 70%;
+    overflow: hidden;
+}
+
+/* Image Upload Styles */
+.image-upload {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border: 2px dashed #BBBBBB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #BBBBBB;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.add-file-text {
+    position: absolute;
+    pointer-events: none;
+    color: #BBBBBB;
+    display: block;
+}
+
+#file-input:valid + .add-file-text {
+    display: none;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: none;
+}
+
+#file-input:valid ~ .preview-image {
+    display: block;
+}
+
+.remove-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #FFFFFF;
+    background-color: #FF0000;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1em;
+    display: none;
+}
+
+#file-input:valid ~ .remove-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* File Preview Styles */
+.file-preview {
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+    word-break: break-all;
+}
+
+#file-input:valid ~ .file-preview {
+    display: block;
+}
+
+/* Password Section Styles */
+.password-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.password-input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.password-input-wrapper input {
+    width: 80%;
+    padding: 10px;
+    padding-right: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+}
+
+.password-input-wrapper .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.password-input-wrapper .toggle-password img {
+    width: 20px;
+    height: 20px;
+}
+
+.password-section button {
+    background-color: #FFFFFF;
+    color: #121212;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+.password-section button:hover {
+    background-color: #BBBBBB;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #1F1F1F;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Download Button Styles */
+.download-link button {
+    background-color: #FFFFFF;
+    color: #121212;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.download-link button:hover {
+    background-color: #BBBBBB;
+}
+
+/* Back to Home Button Styles */
+.back-to-home {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+}
+
+/* Filename Section Styles */
+.filename-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.filename-section input {
+    margin-right: 10px;
+}
