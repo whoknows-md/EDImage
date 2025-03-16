@@ -41,18 +41,11 @@ def encrypt_image(image_data: bytes, password: str) -> bytes:
 
     ciphertext = encryptor.update(image_data) + encryptor.finalize()
     return base64.b64encode(salt + iv + ciphertext)
-<<<<<<< HEAD
 
 
 def decrypt_image(encrypted_data: bytes, password: str) -> bytes:
     """Decrypts the ciphertext and returns the original image data."""
 
-=======
-
-def decrypt_image(encrypted_data: bytes, password: str) -> bytes:
-    """Decrypts the ciphertext and returns the original image data."""
-    
->>>>>>> cde95025ba8bb7993926f15823ed5f0602722770
     encrypted_data = base64.b64decode(encrypted_data)
     salt, iv, ciphertext = encrypted_data[:ARGON2_SALT_LENGTH], encrypted_data[ARGON2_SALT_LENGTH:ARGON2_SALT_LENGTH + IV_LENGTH], encrypted_data[ARGON2_SALT_LENGTH + IV_LENGTH:]
     key = derive_key(password, salt)
